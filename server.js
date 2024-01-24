@@ -11,3 +11,17 @@ const sequelize = require('./config/config');
 
 // Set up Handlebars.js engine with custom helpers
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+const sesh = {
+    secret: process.env.SESSION_SECRET,
+    cookie: {
+        maxAge: 300000,
+    },
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+        db: sequelize
+    }),
+};
+
+app.use(session(sesh));
