@@ -20,3 +20,19 @@ h6 {
     color: var(--dark);
     line-height: 1.25;
 }
+
+
+#header {
+    padding-top: 20px;
+  }
+  
+  body {
+      color: var(--dark);
+      background-color: var(--primary);
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      font-size: 16px;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;    
+  }
