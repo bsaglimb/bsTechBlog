@@ -15,10 +15,30 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 
-<body>
+<body class="flex-column min-100-vh"></body>>
+   <nav class="navbar custom-navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <div>
+                <a class="nav-item nav-link" href="/"><i class="bi bi-house"></i>Home</a>                
+                <a class="nav-item nav-link" href="/dashboard"><i class="bi bi-card-list"></i>Dashboard</a>       
+                {{#if loggedIn}}             
+                    <a class="nav-item nav-link" href="/login" id="logout"><i class="bi bi-box-arrow-right"></i>Logout</a>
+                {{else}}
+                    <a class="nav-item nav-link" href="/login"><i class="bi bi-box-arrow-in-right"></i>Login</a>
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+  <header class="text-center">        
+            <div class="container d-flex align-items-center flex-column">
+                <h1 id="header">Welcome to Brianna's Tech Blog</h1>
+            </div>        
+    </header>
 
+    <main class="col-auto">
+        {{{body}}}
+    </main>
 </body>
-
 </html>
 
 <script src="/js/logout.js"></script>
